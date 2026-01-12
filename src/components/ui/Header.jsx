@@ -71,7 +71,7 @@ const Header = () => {
           {/* Logo */}
           <Link 
             to="/portfolio-homepage" 
-            className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200"
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200 whitespace-nowrap"
             onClick={closeMobileMenu}
           >
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -80,14 +80,14 @@ const Header = () => {
             <span className="text-xl font-semibold text-foreground">Portfolio Pro</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex items-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
             {navigationItems?.slice(0, 4)?.map((item) => (
               item?.type === 'scroll' ? (
                 <button
                   key={item?.path}
                   onClick={() => handleNavClick(item)}
-                  className="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:bg-muted text-muted-foreground hover:text-foreground"
+                  className="px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 hover:bg-muted text-muted-foreground hover:text-foreground"
                 >
                   {item?.name}
                 </button>
@@ -95,7 +95,7 @@ const Header = () => {
                 <Link
                   key={item?.path}
                   to={item?.path}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:bg-muted ${
+                  className={`px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 hover:bg-muted ${
                     isActivePath(item?.path)
                       ? 'text-primary bg-muted' :'text-muted-foreground hover:text-foreground'
                   }`}
@@ -107,14 +107,14 @@ const Header = () => {
             
             {/* More Menu for Additional Items */}
             <div className="relative group">
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="sm"
                 className="px-4 py-2"
               >
-                More
+                
                 <Icon name="ChevronDown" size={16} className="ml-1" />
-              </Button>
+              </Button> */}
               
               <div className="absolute right-0 top-full mt-1 w-48 bg-popover border border-border rounded-md shadow-elevation-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="py-1">
@@ -134,7 +134,7 @@ const Header = () => {
           </nav>
 
           {/* Theme Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <Button
               variant="ghost"
               size="icon"
@@ -189,6 +189,20 @@ const Header = () => {
                   </Link>
                 )
               ))}
+              
+              {/* Mobile Download CV */}
+              {cvDownloadLink && (
+                <a
+                  href={cvDownloadLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 tap-target w-full text-left text-muted-foreground hover:text-foreground hover:bg-muted bg-primary/10"
+                >
+                  <Icon name="Download" size={18} className="mr-3" />
+                  Download CV
+                </a>
+              )}
             </nav>
           </div>
         )}
