@@ -51,6 +51,51 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/user/airbnb-clone",
       metrics: { performance: "92/100", users: "8K+" },
     },
+    {
+      id: 4,
+      title: "Streamfy-chat-app",
+      description:
+        "Real-time chat application with authentication, private & group messaging, media sharing, online status, typing indicators, and responsive UI..",
+      image:
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=300&fit=crop",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
+      category: "Full Stack",
+      status: "Live",
+      featured: true,
+     
+      githubUrl: "https://github.com/umesh-webdev25/streamify-video-callse",
+      metrics: { performance: "92/100", users: "8K+" },
+    },
+      {
+      id: 5,
+      title: "TalkEasy Voice Assistant",
+      description:
+        "Voice-enabled web assistant that listens to user commands, answers queries, opens websites, and performs tasks using Speech Recognition & Text-to-Speech.",
+      image:
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=300&fit=crop",
+      technologies: ["javascripte",  "Node.js", "MongoDB", "Express", "websocket API","python"],
+      category: "Full Stack",
+      status: "Live",
+      featured: true,
+     
+      githubUrl: "https://github.com/umesh-webdev25/TalkEasy-VoiceAssistant/tree/dev",
+      metrics: { performance: "92/100", users: "8K+" },
+    },
+    {
+      id: 6,
+      title: "YT Downloader Pro",
+      description:
+        "Full-stack YouTube downloader that accepts video/playlist URLs, lets users select quality, and downloads videos/audio with a clean UI and fast processing..",
+      image:
+        "https://images.pexels.com/photos/3945655/pexels-photo-3945655.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
+      technologies: ["React", "MongoDB", "Express", "python"],
+      category: "Full Stack",
+      status: "Live",
+      featured: true,
+     
+      githubUrl: "https://github.com/umesh-webdev25/youtube-downloader",
+      metrics: { performance: "92/100", users: "8K+" },
+    },
   ];
 
   const categories = ["All", "Full Stack", "Frontend"];
@@ -90,11 +135,10 @@ const ProjectsSection = () => {
                 key={category}
                 onClick={() => setActiveFilter(category)}
                 className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300
-                ${
-                  activeFilter === category
+                ${activeFilter === category
                     ? "bg-primary text-primary-foreground shadow-md scale-[1.02]"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-                }`}
+                  }`}
               >
                 {category}
               </button>
