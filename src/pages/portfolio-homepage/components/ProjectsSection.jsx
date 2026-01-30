@@ -17,8 +17,8 @@ const ProjectsSection = () => {
       category: "Frontend",
       status: "Live",
       featured: true,
-      liveUrl: "https://gemini-clone-demo.vercel.app",
-      githubUrl: "https://github.com/user/gemini-clone",
+      liveUrl: "https://google-gemini-six-sandy.vercel.app/",
+      githubUrl: "https://github.com/umesh-webdev25/Google-gemini",
       metrics: { performance: "96/100", users: "3K+" },
     },
     {
@@ -33,7 +33,7 @@ const ProjectsSection = () => {
       status: "Live",
       featured: true,
       liveUrl: "https://amazon-clone-frontend.netlify.app",
-      githubUrl: "https://github.com/user/amazon-clone",
+      githubUrl: "https://github.com/umesh-webdev25/Amazon_clone",
       metrics: { performance: "94/100", users: "5K+" },
     },
     {
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
       status: "Live",
       featured: true,
       liveUrl: "https://airbnb-fullstack-app.herokuapp.com",
-      githubUrl: "https://github.com/user/airbnb-clone",
+      githubUrl: "https://github.com/umesh-webdev25/airbnb-clone",
       metrics: { performance: "92/100", users: "8K+" },
     },
     {
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
       status: "Live",
       featured: true,
      
-      githubUrl: "https://github.com/umesh-webdev25/streamify-video-callse",
+      githubUrl: "https://github.com/umesh-webdev25/streamify-video-calls",
       metrics: { performance: "92/100", users: "8K+" },
     },
       {

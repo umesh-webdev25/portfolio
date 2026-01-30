@@ -221,33 +221,34 @@ const techStack = [
           )}
         </div>
 
-        {/* Bottom Card */}
-        <div className="mt-16">
-          <div className="bg-card border border-border rounded-2xl p-8 shadow-elevation-3 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
+       {/* Bottom Card */}
+<div className="mt-16">
+  <div className="bg-card border border-border rounded-2xl p-8 shadow-elevation-3 relative overflow-hidden text-center">
+    <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
 
-            <h3 className="text-2xl font-bold text-foreground mb-3">
-              Always Learning 🚀
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-3xl">
-              I continuously improve my skills and explore new technologies to stay updated
-              with modern web development practices.
-            </p>
+    <h3 className="text-2xl font-bold text-foreground mb-3">
+      Always Learning 🚀
+    </h3>
+    <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
+      I continuously improve my skills and explore new technologies to stay updated
+      with modern web development practices.
+    </p>
 
-            <div className="flex flex-wrap gap-3">
-              {["TypeScript", "Docker", "AWS", "Next.js"].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 rounded-full text-sm font-semibold
-                  bg-muted/50 text-foreground border border-border
-                  hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-pointer"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+    <div className="flex flex-wrap gap-3 justify-center">
+      {["TypeScript", "Docker", "AWS", "Next.js"].map((tech) => (
+        <span
+          key={tech}
+          className="px-4 py-2 rounded-full text-sm font-semibold
+          bg-muted/50 text-foreground border border-border
+          hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-pointer"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
+</div>
+
       </div>
     </section>
   );
