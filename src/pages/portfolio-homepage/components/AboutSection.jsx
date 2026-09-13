@@ -31,7 +31,7 @@ const AboutSection = () => {
                 <div className="w-full h-full rounded-full overflow-hidden bg-card border border-border">
                   <img
                     src="/assets/images/myImage.png"
-                    alt="Umesh Gayakwad"
+                    alt="Umesh Gayakwad - MERN Stack Developer"
                     className="w-full h-full object-cover object-[50%_20%]"
                   />
                 </div>
