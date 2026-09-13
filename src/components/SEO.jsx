@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SEO = () => {
-  const siteUrl = "https://portfolio-seven-rho-2qtqbgnh1n.vercel.app/";
+const siteUrl = "https://portfolio-seven-rho-2qtqbgnh1n.vercel.app";
 
   const title = "Umesh Gayakwad | MERN Stack Developer";
 
