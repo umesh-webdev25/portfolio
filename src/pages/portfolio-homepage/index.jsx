@@ -3,6 +3,7 @@ import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
+import EducationSection from './components/EducationSection';
 import ProjectsSection from './components/ProjectsSection';
 import Footer from './components/Footer';
 import SEO from "../../components/SEO";
@@ -63,6 +64,7 @@ const PortfolioHomepage = () => {
         <HeroSection onScrollToProjects={scrollToProjects} />
         <AboutSection />
         <SkillsSection />
+        <EducationSection />
         <ProjectsSection />
       </main>
 

@@ -5,12 +5,12 @@ import TargetCursor from "./components/TargetCursor";
 function App() {
   return (
     <>
-      <TargetCursor
+      {/* <TargetCursor
         spinDuration={2}
         hideDefaultCursor={true}
         parallaxOn={true}
         hoverDuration={0.2}
-      />
+      /> */}
 
       <Routes />
     </>
