@@ -2,6 +2,14 @@ import React from "react";
 import Icon from "../../../components/AppIcon";
 
 const AboutSection = () => {
+  const cvDownloadLink = import.meta.env.VITE_CV_DOWNLOAD_LINK;
+
+  const handleDownloadCV = () => {
+    if (cvDownloadLink) {
+      window.open(cvDownloadLink, "https://drive.google.com/file/d/1fh4FqSlRw6p4zs5FIW1BzTXowL8lNUN1/view?usp=drive_link");
+    }
+  };
+
   return (
     <section id="about" className="relative py-24 px-6 bg-card overflow-hidden">
       {/* ✅ Background Effects */}
@@ -117,14 +125,12 @@ const AboutSection = () => {
                 Contact Me
               </a>
 
-              <a
-                href="/assets/resume/umesh-cv.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="px-8 py-4 rounded-2xl border-2 border-primary text-primary font-bold text-lg hover:bg-primary hover:text-primary-foreground hover:scale-[1.03] transition-all duration-300 text-center"
+              <button
+                onClick={handleDownloadCV}
+                className="px-8 py-4 rounded-2xl border-2 border-primary text-primary font-bold text-lg hover:bg-primary hover:text-primary-foreground hover:scale-[1.03] transition-all duration-300 text-center cursor-pointer"
               >
                 Download CV
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -54,7 +54,7 @@ const HeroSection = ({ onScrollToProjects }) => {
 
   const handleDownloadCV = () => {
     if (cvDownloadLink) {
-      window.open(cvDownloadLink, "https://drive.google.com/file/d/1AxKn15mMs8-7ucNFApn43PRI5IRfoK-9/view?usp=drive_link");
+      window.open(cvDownloadLink, "https://drive.google.com/file/d/1fh4FqSlRw6p4zs5FIW1BzTXowL8lNUN1/view?usp=drive_link");
     }
   };
 
