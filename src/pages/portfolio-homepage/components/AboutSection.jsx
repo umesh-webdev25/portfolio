@@ -54,17 +54,17 @@ const AboutSection = () => {
           </div>
 
           {/* ✅ Right Side - Content */}
-          <div className="space-y-8">
+          <div className="space-y-5">
             {/* Title */}
-            <div className="bg-card/60 backdrop-blur-xl border border-border rounded-2xl p-8 shadow-elevation-2">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+            <div className="bg-card/60 backdrop-blur-xl border border-border rounded-2xl p-6 shadow-elevation-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                 Hello! I’m{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-accent">
                   Umesh Gayakwad
                 </span>
               </h3>
 
-              <p className="text-muted-foreground leading-relaxed mb-5">
+              <p className="text-muted-foreground leading-relaxed mb-3">
                 I’m a passionate Full Stack Developer focused on building modern,
                 scalable, and user-friendly web applications. I enjoy creating
                 clean UI and robust backend APIs using the MERN stack.
@@ -77,7 +77,7 @@ const AboutSection = () => {
               </p>
 
               {/* ✅ Quick Info Badges */}
-              <div className="flex flex-wrap gap-3 mt-6">
+              <div className="flex flex-wrap gap-3 mt-4">
                 {[
                   { icon: "MapPin", text: "Raipur, Chhattisgarh" },
                   { icon: "GraduationCap", text: "MCA Student" },
@@ -96,8 +96,8 @@ const AboutSection = () => {
             </div>
 
             {/* ✅ Stats Cards */}
-            <div className="grid sm:grid-cols-2 gap-5">
-              <div className="bg-card/70 border border-border rounded-2xl p-6 shadow-elevation-2 hover:scale-[1.02] transition">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="bg-card/70 border border-border rounded-2xl p-5 shadow-elevation-2 hover:scale-[1.02] transition">
                 <p className="text-muted-foreground text-sm font-semibold">
                   Experience
                 </p>
@@ -106,7 +106,7 @@ const AboutSection = () => {
                 </p>
               </div>
 
-              <div className="bg-card/70 border border-border rounded-2xl p-6 shadow-elevation-2 hover:scale-[1.02] transition">
+              <div className="bg-card/70 border border-border rounded-2xl p-5 shadow-elevation-2 hover:scale-[1.02] transition">
                 <p className="text-muted-foreground text-sm font-semibold">
                   Projects
                 </p>

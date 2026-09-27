@@ -5,22 +5,22 @@ import Icon from '../../../components/AppIcon';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-card rounded-lg overflow-hidden shadow-elevation-2 hover-elevation transition-all duration-300">
-      <div className="relative overflow-hidden h-48">
+    <div className="bg-card rounded-lg overflow-hidden shadow-elevation-2 hover-elevation transition-all duration-300 h-full flex flex-col">
+      <div className="relative overflow-hidden h-48 shrink-0">
         <Image
           src={project?.image}
           alt={project?.title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
-        <div className="absolute top-4 right-4">
-          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-            project?.status === 'Live' ?'bg-success text-success-foreground' :'bg-warning text-warning-foreground'
-          }`}>
-            {project?.status}
-          </span>
-        </div>
+        {project?.liveUrl && (
+          <div className="absolute top-4 right-4">
+            <span className="px-3 py-1 rounded-full text-xs font-medium bg-success text-success-foreground">
+              Live
+            </span>
+          </div>
+        )}
       </div>
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-semibold text-foreground">
             {project?.title}
@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         
-        <div className="flex space-x-3">
+        <div className="flex space-x-3 mt-auto">
           {project?.liveUrl && (
             <Button
               variant="default"

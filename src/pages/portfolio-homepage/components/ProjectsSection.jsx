@@ -8,33 +8,33 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Gemini Clone",
+      title: "TalkEasy Voice Assistant",
       description:
-        "A sophisticated AI-powered chat interface replicating Google Gemini's conversational AI capabilities. Features real-time messaging, conversation history, and responsive design.",
+        "Voice-enabled web assistant that listens to user commands, answers queries, opens websites, and performs tasks using Speech Recognition & Text-to-Speech.",
       image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
-      technologies: ["React", "JavaScript", "Tailwind CSS", "OpenAI API"],
-      category: "Frontend",
+        "/assets/porjectImage/TalkEasy.png",
+      technologies: ["JavaScript", "Node.js", "Express", "WebSocket API", "Python"],
+      category: "Full Stack",
       status: "Live",
       featured: true,
-      liveUrl: "https://google-gemini-six-sandy.vercel.app/",
-      githubUrl: "https://github.com/umesh-webdev25/Google-gemini",
-      metrics: { performance: "96/100", users: "3K+" },
+      githubUrl: "https://github.com/umesh-webdev25/TalkEasy",
+      liveUrl: "https://talkeasy-assistant.vercel.app/",
+      metrics: { performance: "92/100", users: "8K+" },
     },
     {
       id: 2,
-      title: "Amazon Clone",
+      title: "Meetflow Video Calling",
       description:
-        "A full e-commerce UI inspired by Amazon with product listing, filters, cart & checkout. Built with modern frontend tools for performance.",
+        "Real-time video calling application featuring secure peer-to-peer connections, screen sharing, and in-call messaging for seamless communication.",
       image:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=300&fit=crop",
-      technologies: ["React", "Redux", "JavaScript", "CSS3"],
-      category: "Frontend",
+        "/assets/porjectImage/Meetflow.png",
+      technologies: ["React", "WebRTC", "Socket.io", "Node.js"],
+      category: "Full Stack",
       status: "Live",
       featured: true,
-      liveUrl: "https://amazon-clone-frontend.netlify.app",
-      githubUrl: "https://github.com/umesh-webdev25/Amazon_clone",
-      metrics: { performance: "94/100", users: "5K+" },
+      githubUrl: "https://github.com/umesh-webdev25/MeetFlow_video_call",
+      liveUrl: "https://meetflowhq.vercel.app/",
+      metrics: { performance: "95/100", users: "1K+" },
     },
     {
       id: 3,
@@ -42,59 +42,41 @@ const ProjectsSection = () => {
       description:
         "Full-stack vacation rental platform with authentication, booking flow, Stripe payments, and interactive dashboards for hosts & guests.",
       image:
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=300&fit=crop",
+        "/assets/porjectImage/Airbnb.png",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
       category: "Full Stack",
       status: "Live",
       featured: true,
-      liveUrl: "https://airbnb-fullstack-app.herokuapp.com",
       githubUrl: "https://github.com/umesh-webdev25/airbnb-clone",
       metrics: { performance: "92/100", users: "8K+" },
     },
     {
       id: 4,
-      title: "Streamfy-chat-app",
+      title: "Notepad Pro",
       description:
-        "Real-time chat application with authentication, private & group messaging, media sharing, online status, typing indicators, and responsive UI..",
+        "A feature-rich digital notepad application with rich text editing, cloud sync, folder organization, and markdown support for productive note-taking.",
       image:
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
-      category: "Full Stack",
+        "/assets/porjectImage/Notepad.png",
+      technologies: ["React", "Redux", "Tailwind CSS", "Firebase"],
+      category: "Frontend",
       status: "Live",
       featured: true,
-     
-      githubUrl: "https://github.com/umesh-webdev25/streamify-video-calls",
-      metrics: { performance: "92/100", users: "8K+" },
-    },
-      {
-      id: 5,
-      title: "TalkEasy Voice Assistant",
-      description:
-        "Voice-enabled web assistant that listens to user commands, answers queries, opens websites, and performs tasks using Speech Recognition & Text-to-Speech.",
-      image:
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=300&fit=crop",
-      technologies: ["javascripte",  "Node.js", "MongoDB", "Express", "websocket API","python"],
-      category: "Full Stack",
-      status: "Live",
-      featured: true,
-     
-      githubUrl: "https://github.com/umesh-webdev25/TalkEasy-VoiceAssistant/tree/dev",
-      metrics: { performance: "92/100", users: "8K+" },
+      githubUrl: "https://github.com/umesh-webdev25/Notepad-Pro",
+      metrics: { performance: "98/100", users: "2K+" },
     },
     {
-      id: 6,
-      title: "YT Downloader Pro",
+      id: 5,
+      title: "AIQuiz",
       description:
-        "Full-stack YouTube downloader that accepts video/playlist URLs, lets users select quality, and downloads videos/audio with a clean UI and fast processing..",
+        "Interactive AI-powered quiz platform that automatically generates questions based on selected topics, tracking user scores and progress over time.",
       image:
-        "https://images.pexels.com/photos/3945655/pexels-photo-3945655.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
-      technologies: ["React", "MongoDB", "Express", "python"],
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&h=300&fit=crop",
+      technologies: ["React", "OpenAI API", "Node.js", "MongoDB"],
       category: "Full Stack",
       status: "Live",
       featured: true,
-     
-      githubUrl: "https://github.com/umesh-webdev25/youtube-downloader",
-      metrics: { performance: "92/100", users: "8K+" },
+      githubUrl: "https://github.com/umesh-webdev25/AIQuiz",
+      metrics: { performance: "94/100", users: "4K+" },
     },
   ];
 
@@ -151,7 +133,7 @@ const ProjectsSection = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="transform transition-all duration-300 hover:-translate-y-1"
+              className="transform transition-all duration-300 hover:-translate-y-1 h-full"
             >
               <ProjectCard project={project} />
             </div>
