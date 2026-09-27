@@ -38,7 +38,7 @@ const AboutSection = () => {
               <div className="relative w-[420px] h-[420px] rounded-full p-2 bg-gradient-to-tr from-primary via-blue-500 to-accent shadow-elevation-3">
                 <div className="w-full h-full rounded-full overflow-hidden bg-card border border-border">
                   <img
-                    src="/assets/images/myImage.png"
+                    src="/assets/images/myImage.jpeg"
                     alt="Umesh Gayakwad - MERN Stack Developer"
                     className="w-full h-full object-cover object-[50%_20%]"
                   />
