@@ -54,7 +54,7 @@ const HeroSection = ({ onScrollToProjects }) => {
 
   const handleDownloadCV = () => {
     if (cvDownloadLink) {
-      window.open(cvDownloadLink, "https://drive.google.com/file/d/1AxKn15mMs8-7ucNFApn43PRI5IRfoK-9/view?usp=drive_link");
+      window.open(cvDownloadLink, "https://drive.google.com/file/d/1fh4FqSlRw6p4zs5FIW1BzTXowL8lNUN1/view?usp=drive_link");
     }
   };
 
@@ -107,13 +107,13 @@ const HeroSection = ({ onScrollToProjects }) => {
                     {/* Light Mode Image */}
                     <img
                       src={mainIcon}
-                      alt="Umesh Gayakwad - Developer"
+                      alt="Umesh Gayakwad - MERN Stack Developer"
                       className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-700 block dark:hidden drop-shadow-2xl"
                     />
                     {/* Dark Mode Image */}
                     <img
                       src={mainIconDark}
-                      alt="Umesh Gayakwad - Developer"
+                      alt="Umesh Gayakwad - MERN Stack Developer"
                       className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-700 hidden dark:block drop-shadow-2xl"
                     />
                   </motion.div>
@@ -157,9 +157,9 @@ const HeroSection = ({ onScrollToProjects }) => {
                 </span>
               </h1>
 
-              <h2 className="text-xl md:text-2xl font-medium text-muted-foreground/90 tracking-tight">
+              <p className="text-xl md:text-2xl font-medium text-muted-foreground/90 tracking-tight">
                 Full Stack Developer <span className="text-primary/40 px-2">|</span> MERN Stack Expert
-              </h2>
+              </p>
             </motion.div>
 
             {/* 3. Info Tags */}
@@ -173,6 +173,7 @@ const HeroSection = ({ onScrollToProjects }) => {
                 <Icon name="GraduationCap" size={16} className="text-primary" />
                 <span className="text-sm font-medium">MCA Student</span>
               </span>
+              
             </motion.div>
 
             {/* 4. Description */}

@@ -7,6 +7,7 @@ const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const cvDownloadLink = ""; // To be filled with actual CV link
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -38,6 +39,7 @@ const Header = () => {
     { name: 'Home', path: '#home', icon: 'Home', type: 'scroll' },
     { name: 'About', path: '#about', icon: 'User', type: 'scroll' },
     { name: 'Skills', path: '#skills', icon: 'Code', type: 'scroll' },
+    { name: 'Education', path: '#education', icon: 'GraduationCap', type: 'scroll' },
     { name: 'Projects', path: '#projects', icon: 'FolderOpen', type: 'scroll' },
     { name: 'Contact', path: '/contact', icon: 'Mail', type: 'route' }
   ];
@@ -77,12 +79,12 @@ const Header = () => {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <Icon name="Code" size={20} color="white" />
             </div>
-            <span className="text-xl font-semibold text-foreground">Portfolio Pro</span>
+            <span className="text-xl font-semibold text-foreground">Portfolio</span>
           </Link>
 
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
-            {navigationItems?.slice(0, 4)?.map((item) => (
+            {navigationItems?.slice(0, 5)?.map((item) => (
               item?.type === 'scroll' ? (
                 <button
                   key={item?.path}

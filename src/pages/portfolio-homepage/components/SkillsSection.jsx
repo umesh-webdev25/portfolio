@@ -222,7 +222,7 @@ const techStack = [
         </div>
 
        {/* Bottom Card */}
-<div className="mt-16">
+{/* <div className="mt-16">
   <div className="bg-card border border-border rounded-2xl p-8 shadow-elevation-3 relative overflow-hidden text-center">
     <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
 
@@ -247,7 +247,7 @@ const techStack = [
       ))}
     </div>
   </div>
-</div>
+</div> */}
 
       </div>
     </section>
