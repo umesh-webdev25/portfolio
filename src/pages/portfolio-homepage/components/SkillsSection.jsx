@@ -9,22 +9,6 @@ const SkillsSection = () => {
     Languages: [
       {
         id: 1,
-        name: "C",
-        icon: "Code2",
-        description: "System-level & low-level programming",
-        proficiency: 78,
-        experience: "1+ years experience",
-      },
-      {
-        id: 2,
-        name: "C++",
-        icon: "Terminal",
-        description: "Algorithms & problem solving",
-        proficiency: 60,
-        experience: "2+ years experience",
-      },
-      {
-        id: 3,
         name: "Java",
         icon: "Coffee",
         description: "Object-oriented programming",
@@ -32,93 +16,86 @@ const SkillsSection = () => {
         experience: "3+ years experience",
       },
       {
-        id: 4,
+        id: 2,
         name: "JavaScript",
         icon: "Code",
         description: "Dynamic web development language",
         proficiency: 90,
-        experience: "3+ years experience",
+        experience: "2 years experience",
       },
-      {
-        id: 5,
-        name: "CSS",
-        icon: "Palette",
-        description: "Responsive & modern UI styling",
-        proficiency: 92,
-        experience: "3+ years experience",
-      },
+  
     ],
 
     "Frameworks/Libraries": [
       {
-        id: 6,
+        id: 3,
         name: "React.js",
         icon: "Atom",
         description: "Frontend UI library",
         proficiency: 85,
-        experience: "2+ years experience",
+        experience: "1 years experience",
       },
       {
-        id: 7,
+        id: 4,
         name: "Node.js",
         icon: "Server",
         description: "Backend JavaScript runtime",
         proficiency: 80,
-        experience: "2+ years experience",
+        experience: "1 years experience",
       },
       {
-        id: 8,
+        id: 5,
         name: "Express.js",
         icon: "Zap",
         description: "REST API & backend framework",
         proficiency: 80,
-        experience: "2+ years experience",
+        experience: "1 years experience",
       },
       {
-        id: 9,
+        id: 6,
         name: "Tailwind CSS",
         icon: "Wind",
         description: "Utility-first CSS framework",
         proficiency: 90,
-        experience: "2+ years experience",
+        experience: "1 years experience",
       },
     ],
 
     Tools: [
       {
-        id: 10,
+        id: 7,
         name: "MongoDB",
         icon: "Database",
         description: "NoSQL database management",
         proficiency: 85,
-        experience: "2+ years experience",
+        experience: "1 years experience",
       },
       {
-        id: 11,
+        id: 8,
         name: "MySQL",
         icon: "Database",
         description: "Relational database and queries",
         proficiency: 85,
-        experience: "2+ years experience",
+        experience: "1 years experience",
       },
       {
-        id: 12,
+        id: 9,
         name: "Git",
         icon: "GitBranch",
         description: "Version control system",
         proficiency: 88,
-        experience: "3+ years experience",
+        experience: "3 years experience",
       },
       {
-        id: 13,
+        id: 10,
         name: "GitHub",
         icon: "Github",
         description: "Code collaboration platform",
         proficiency: 88,
-        experience: "3+ years experience",
+        experience: "3 years experience",
       },
       {
-        id: 14,
+        id: 11,
         name: "Postman",
         icon: "Send",
         description: "API testing tool",
@@ -126,7 +103,7 @@ const SkillsSection = () => {
         experience: "2+ years experience",
       },
       {
-        id: 15,
+        id: 12,
         name: "VS Code",
         icon: "Monitor",
         description: "Code editor for development",
@@ -136,13 +113,7 @@ const SkillsSection = () => {
     ],
   };
 
-  const tabs = Object.keys(categories);
-
-  const filteredSkills = useMemo(() => {
-    return categories[activeTab].filter((skill) =>
-      skill.name.toLowerCase().includes(search.toLowerCase())
-    );
-  }, [activeTab, search]);
+  const allSkills = Object.values(categories).flat();
 const techStack = [
   { name: "MongoDB", icon: "Leaf" },       // Mongo
   { name: "Express.js", icon: "Code" },    // Express
@@ -167,44 +138,15 @@ const techStack = [
           <div className="mt-6 w-28 h-1 mx-auto rounded-full bg-gradient-to-r from-primary via-purple-500 to-pink-500"></div>
         </div>
 
-        {/* Tabs + Search */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10">
-          {/* Tabs */}
-          <div className="flex gap-2 flex-wrap justify-center bg-card/60 backdrop-blur border border-border rounded-full p-2 shadow-elevation-2">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300
-                ${
-                  activeTab === tab
-                    ? "bg-primary text-primary-foreground shadow-md scale-[1.02]"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
 
-          {/* Search */}
-          <div className="w-full md:w-[320px]">
-            <input
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search skill..."
-              className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground outline-none focus:ring-2 focus:ring-primary/60 transition"
-            />
-          </div>
-        </div>
 
         {/* Skills Grid */}
         <div className="relative">
           {/* Background glow */}
           <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[450px] h-[250px] bg-primary/20 blur-3xl rounded-full -z-10"></div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
-            {filteredSkills.map((skill) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            {allSkills.map((skill) => (
               <div
                 key={skill.id}
                 className="transform transition-all duration-300 hover:-translate-y-1"
@@ -214,11 +156,7 @@ const techStack = [
             ))}
           </div>
 
-          {filteredSkills.length === 0 && (
-            <p className="text-center mt-10 text-muted-foreground">
-              No skills found. Try searching another keyword.
-            </p>
-          )}
+
         </div>
 
        {/* Bottom Card */}

@@ -6,7 +6,7 @@ import Icon from '../../../components/AppIcon';
 const ProjectCard = ({ project }) => {
   return (
     <div className="bg-card rounded-lg overflow-hidden shadow-elevation-2 hover-elevation transition-all duration-300 h-full flex flex-col">
-      <div className="relative overflow-hidden h-48 shrink-0">
+      <div className="relative overflow-hidden h-56 shrink-0">
         <Image
           src={project?.image}
           alt={project?.title}

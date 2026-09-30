@@ -13,7 +13,7 @@ const ProjectsSection = () => {
         "Voice-enabled web assistant that listens to user commands, answers queries, opens websites, and performs tasks using Speech Recognition & Text-to-Speech.",
       image:
         "/assets/porjectImage/TalkEasy.png",
-      technologies: ["JavaScript", "Node.js", "Express", "WebSocket API", "Python"],
+      technologies: ["JavaScript", "Node.js", "Express", "WebSocket API"],
       category: "Full Stack",
       status: "Live",
       featured: true,
@@ -95,7 +95,7 @@ const ProjectsSection = () => {
       <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-primary/10 rounded-full blur-3xl opacity-50"></div>
       <div className="absolute bottom-[-200px] -right-40 w-[520px] h-[520px] bg-accent/10 rounded-full blur-3xl opacity-40"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-[1440px] mx-auto">
         {/* ✅ Heading */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground tracking-tight">
@@ -129,7 +129,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* ✅ Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
