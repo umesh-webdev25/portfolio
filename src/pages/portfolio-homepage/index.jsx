@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
+import ExperienceSection from './components/ExperienceSection';
 import SkillsSection from './components/SkillsSection';
 import EducationSection from './components/EducationSection';
 import ProjectsSection from './components/ProjectsSection';
@@ -63,8 +64,9 @@ const PortfolioHomepage = () => {
       <main>
         <HeroSection onScrollToProjects={scrollToProjects} />
         <AboutSection />
-        <SkillsSection />
+        <ExperienceSection />
         <EducationSection />
+        <SkillsSection />
         <ProjectsSection />
       </main>
 

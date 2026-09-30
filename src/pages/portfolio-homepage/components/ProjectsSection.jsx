@@ -139,45 +139,6 @@ const ProjectsSection = () => {
             </div>
           ))}
         </div>
-
-        {/* ✅ CTA (Premium Card) */}
-        <div className="mt-20 text-center">
-          <div className="relative overflow-hidden bg-card/70 border border-border rounded-2xl p-10 shadow-elevation-3 backdrop-blur">
-            {/* glow */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
-
-            <h3 className="text-2xl md:text-3xl font-extrabold text-foreground mb-4">
-              Interested in Working Together?
-            </h3>
-
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities, interesting projects,
-              or potential collaborations. Let’s build something amazing together!
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="default"
-                size="lg"
-                iconName="Mail"
-                iconPosition="left"
-                className="px-10 py-5 rounded-2xl shadow-lg hover:shadow-primary/40 hover:scale-[1.04] transition"
-              >
-                Get In Touch
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                iconName="Download"
-                iconPosition="left"
-                className="px-10 py-5 rounded-2xl border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-[1.04] transition"
-              >
-                View Resume
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
