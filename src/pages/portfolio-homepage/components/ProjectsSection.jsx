@@ -68,10 +68,10 @@ const ProjectsSection = () => {
       id: 5,
       title: "AIQuiz",
       description:
-        "Interactive AI-powered quiz platform that automatically generates questions based on selected topics, tracking user scores and progress over time.",
+        "AI-powered learning platform featuring dynamic quiz generation, an online code editor for DSA practice, AI hints and solution explanations, and progress tracking.",
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&h=300&fit=crop",
-      technologies: ["React", "OpenAI API", "Node.js", "MongoDB"],
+        "/assets/porjectImage/Quiz.png",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Gemini API"],
       category: "Full Stack",
       status: "Live",
       featured: true,
