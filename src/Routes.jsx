@@ -4,6 +4,7 @@ import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
 import NotFound from "pages/NotFound";
 import PortfolioHomepage from './pages/portfolio-homepage';
+import ContactPage from './pages/Contact';
 
 const Routes = () => {
   return (
@@ -14,6 +15,7 @@ const Routes = () => {
         {/* Define your route here */}
         <Route path="/" element={<PortfolioHomepage />} />
         <Route path="/portfolio-homepage" element={<Navigate to="/" replace />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

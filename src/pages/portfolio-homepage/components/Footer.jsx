@@ -14,6 +14,7 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
@@ -165,9 +166,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* ✅ Bottom Bar */}
-        <div className="mt-14 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+      {/* ✅ Bottom Bar */}
+      <div className="border-t border-border w-full relative z-10">
+        <div className="w-full px-6 md:px-12 lg:px-24 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm font-medium">
             © {currentYear} Umesh Gayakwad. All rights reserved.
           </p>

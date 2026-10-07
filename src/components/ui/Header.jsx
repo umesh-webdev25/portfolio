@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
 
@@ -7,6 +7,7 @@ const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const cvDownloadLink = ""; // To be filled with actual CV link
 
   useEffect(() => {
@@ -39,21 +40,25 @@ const Header = () => {
     { name: 'Home', path: '#home', icon: 'Home', type: 'scroll' },
     { name: 'About', path: '#about', icon: 'User', type: 'scroll' },
     { name: 'Experience', path: '#experience', icon: 'Briefcase', type: 'scroll' },
-     { name: 'Education', path: '#education', icon: 'GraduationCap', type: 'scroll' },
+    { name: 'Education', path: '#education', icon: 'GraduationCap', type: 'scroll' },
     { name: 'Skills', path: '#skills', icon: 'Code', type: 'scroll' },
-   
     { name: 'Projects', path: '#projects', icon: 'FolderOpen', type: 'scroll' },
+    { name: 'Contact', path: '/contact', icon: 'Mail', type: 'link' },
   ];
 
   const handleNavClick = (item) => {
     if (item?.type === 'scroll') {
-      const element = document.querySelector(item?.path);
-      if (element) {
-        element?.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest'
-        });
+      if (location.pathname !== '/' && location.pathname !== '/portfolio-homepage') {
+        navigate(`/${item.path}`);
+      } else {
+        const element = document.querySelector(item?.path);
+        if (element) {
+          element?.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
       }
     }
     closeMobileMenu();
@@ -107,33 +112,6 @@ const Header = () => {
                 </Link>
               )
             ))}
-            
-            {/* More Menu for Additional Items */}
-            <div className="relative group">
-              {/* <Button
-                variant="ghost"
-                size="sm"
-                className="px-4 py-2"
-              >
-                
-                <Icon name="ChevronDown" size={16} className="ml-1" />
-              </Button> */}
-              
-              <div className="absolute right-0 top-full mt-1 w-48 bg-popover border border-border rounded-md shadow-elevation-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="py-1">
-                  <Link
-                    to="/contact"
-                    className={`flex items-center px-4 py-2 text-sm hover:bg-muted transition-colors duration-200 ${
-                      isActivePath('/contact')
-                        ? 'text-primary bg-muted' :'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    <Icon name="Mail" size={16} className="mr-2" />
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            </div>
           </nav>
 
           {/* Theme Toggle & Mobile Menu */}
