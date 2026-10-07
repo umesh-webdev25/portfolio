@@ -38,10 +38,11 @@ const Header = () => {
   const navigationItems = [
     { name: 'Home', path: '#home', icon: 'Home', type: 'scroll' },
     { name: 'About', path: '#about', icon: 'User', type: 'scroll' },
+    { name: 'Experience', path: '#experience', icon: 'Briefcase', type: 'scroll' },
+     { name: 'Education', path: '#education', icon: 'GraduationCap', type: 'scroll' },
     { name: 'Skills', path: '#skills', icon: 'Code', type: 'scroll' },
-    { name: 'Education', path: '#education', icon: 'GraduationCap', type: 'scroll' },
+   
     { name: 'Projects', path: '#projects', icon: 'FolderOpen', type: 'scroll' },
-    { name: 'Contact', path: '/contact', icon: 'Mail', type: 'route' }
   ];
 
   const handleNavClick = (item) => {
@@ -84,7 +85,7 @@ const Header = () => {
 
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
-            {navigationItems?.slice(0, 5)?.map((item) => (
+            {navigationItems?.map((item) => (
               item?.type === 'scroll' ? (
                 <button
                   key={item?.path}
